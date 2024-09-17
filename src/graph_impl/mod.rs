@@ -33,7 +33,7 @@ pub type DefaultIx = u32;
 ///
 /// Marked `unsafe` because: the trait must faithfully preserve
 /// and convert index values.
-pub unsafe trait IndexType: Copy + Default + Hash + Ord + fmt::Debug + 'static {
+pub unsafe trait IndexType: Copy + Hash + Ord + fmt::Debug + 'static {
     fn new(x: usize) -> Self;
     fn index(&self) -> usize;
     fn max() -> Self;
